@@ -69,7 +69,7 @@ const Login = () => {
             Login
           </button>
           <div className="signup-text">
-            Don't have an account? <a href="#" onClick={redirectToSignup}>Sign Up</a>
+            Dont have an account? <a href="#" onClick={redirectToSignup}>Sign Up</a>
           </div>
         </form>
       </div>
