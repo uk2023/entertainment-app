@@ -1,0 +1,106 @@
+/* VerticalBar.css */
+
+.vertical-bar {
+  width: 60px;
+  height: 80%;
+  background-color: #161D2F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Adjust the alignment as needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  margin: 20px;
+  border-radius: 15px;
+  /* Add any additional styling as per your design */
+}
+
+.logo {
+  margin: 20px 0; /* Adjust the margin as needed */
+  /* Add any logo styling as needed */
+}
+
+.icon-wrapper {
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.icon,
+.icon-1,
+.icon-2 {
+  cursor: pointer;
+  color: #5a698f;
+  font-size: 18px; /* Adjust the icon size as needed */
+}
+
+/* Add styles for links or icons within the vertical bar if needed */
+.icon-1 {
+  color: #fc4747;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.bottom-icon-wrapper {
+  margin-top: auto; /* Push the bottom icon to the bottom */
+}
+
+.icon-2 {
+  font-size: 28px;
+  color: #ec6464fa;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+  .vertical-bar {
+    width: 100%;
+    height: 80px;
+    flex-direction: row; /* Display horizontally */
+    justify-content: space-between; /* Distribute items to the corners */
+    align-items: center;
+    padding: 5px;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .logo {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .icon-1 {
+    font-size: 42px;
+    margin: 0px auto;
+    margin-top: 10px;
+    margin-right: 60px;
+    margin-left: -10px;
+  }
+
+  .icon-2 {
+    font-size: 42px;
+    margin: 0px auto;
+    margin-left: 60px;
+    margin-right: 10px;
+  }
+
+  .icon {
+    font-size: 36px;
+  }
+  .icon-wrapper {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center icons horizontally */
+
+  }
+
+  .bottom-icon-wrapper {
+    margin-top: 0; /* Reset margin for bottom icon */
+  }
+}

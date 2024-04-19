@@ -1,0 +1,124 @@
+.class {
+  font-family: var(--font-poppins);
+}/* styles.css */
+
+:root {
+  --primary-color: #FC4747;
+  --background-color: #10141E;
+  --text-color: #FFFFFF;
+}
+
+body {
+  color: var(--text-color);
+  background-color: #10141E;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: #161D2F;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: var(--text-color);
+}
+
+.login-form {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.login-title {
+  font-weight: 100; /* Adjust the width as needed */
+}
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  font-size: 15px;
+  border: none; /* Remove the border */
+  border-bottom: 1px solid #ced4da; /* Add a bottom border */
+  background-color: transparent;
+  color: var(--text-color);
+  outline: none;
+}
+
+/* Add a transition for a smooth effect */
+.input:hover,
+.input:focus {
+  border-bottom: 1px solid #f4f7f9; /* Change color on hover or focus */
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.signup-text {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.signup-text a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* styles.css */
+
+/* ... your existing styles ... */
+
+.icon {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.top-movie-icon {
+  font-size: 3em; /* Adjust the font size as needed */
+  color: #dc3545; /* Red color for the icon */
+}
+/* styles.css */
+
+/* ... your existing styles ... */
+
+.login-title {
+  text-align: left; /* Align login title to the left */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.input-label {
+  display: none; /* Hide label element */
+}
+
+.input::placeholder {
+  color: #6c757d; /* Placeholder text color */
+}

@@ -1,0 +1,225 @@
+/* DetailedInfo.css */
+
+.detailed-info-container {
+  display: flex;
+  background-color: #10141e;
+  color: #fff;
+  padding: 20px;
+  margin:0px auto ;
+  ;
+}
+
+
+
+.details-content {
+  flex: 1;
+  margin-top: -10px;
+  padding-left: 20px; /* Adjust as needed */
+}
+
+.details-content h2 {
+  font-size: 48px;
+}
+
+.top-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.top-info {
+  font-size: 24px;
+  color: #b8c2d8; /* Bluish-white color */
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info {
+  font-size: 24px;
+}
+
+
+
+/* Additional styling can be added as needed */
+/* DetailedInfo.css */
+/* Add these styles to your DetailedInfo.css file */
+
+.detailed-info-container {
+  display: flex;
+  padding: 20px;
+}
+
+.backdrop-image {
+  border-radius: 15px; /* Border-radius for rounded corners */
+  width: 20vw; /* Adjust as needed */
+  height: 30vw;
+  object-fit: cover; /* Make the image cover the container */
+  margin-left: 30px;
+  margin-right: 65px;
+}
+
+.details-content {
+  padding-left: 20px;
+  flex: 1;
+}
+
+.info-rating {
+  font-size: 24px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.star-rating {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px; /* Adjust the gap as needed */
+  margin-left: 20px;
+}
+
+.star-icon {
+  font-size: 18px;
+}
+
+.star-icon.filled {
+  color: #ffd700; /* Color for filled stars */
+}
+
+.info p {
+  text-decoration: none;
+}
+
+.top-info-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-info {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  color: #ffffff; /* White color */
+  font-size: 18px;
+  
+}
+
+.top-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.top-info p {
+  margin: 5px 0;
+}
+
+.top-info {
+  display: flex;
+  gap: 100px;
+  padding: 0px;
+  border: none;
+}
+
+.top-info div {
+  text-align: left;
+}
+
+.label {
+  color: #ffffff2c; /* Change this color to your preferred label color */
+}
+
+.response {
+  font-weight: bold; /* Add any additional styles as needed */
+}
+
+.top-info p {
+  margin: 5px 0;
+}
+.genres-box {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.genres-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genre-button {
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid #000;
+  border-radius: 0.45vw;
+  padding: 2px 8px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.synopsis {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.synopsis-content {
+  margin-bottom: 20px; /* Add margin to the synopsis content */
+}
+
+
+/* casts */
+.cast-box {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.cast-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cast-button {
+  background-color: transparent;
+  color: #fff; /* White font color */
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid #fff; /* White outline (border) */
+  border-radius: 0.45vw; /* Adjust border-radius as needed */
+  padding: 2px 8px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+/* website button */
+.website-button {
+  background-color: #4a90e2; /* Light navy blue background color */
+  color: #fff; /* White font color */
+  font-weight: 600;
+  font-size: 14px;
+  border: none; /* Remove border */
+  border-radius: 0.45vw; /* Adjust border-radius as needed */
+  padding: 15px 20px; /* 20px vertical padding, 10px horizontal padding */
+  margin-right: 5px;
+  margin-bottom: 10px;
+  cursor: pointer; /* Cursor pointer */
+}

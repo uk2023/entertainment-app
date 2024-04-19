@@ -1,0 +1,101 @@
+/* Tv.css */
+
+.tv-container {
+    display: flex;
+}
+
+.tv-section {
+    flex: 1;
+    padding: 20px;
+    padding-top: 80px;
+    margin-left: 100px;
+}
+
+.tv-heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.details-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.tv-name {
+    font-size: 24px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Add other styles as needed */
+
+.grid-container-tv {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust width as needed */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.details-row {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.info, .info1 {
+    font-size: 18px;
+    color: #b6adad;
+}
+
+.info::before {
+    content: '\2022';
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Styles for TV card */
+.tv-card {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tv-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Add more styles based on your design preferences */
+.bookmark-icon {
+    cursor: pointer; /* Show cursor as pointer */
+    
+  }
+  
+  .bookmark-icon:hover {
+    background-color: rgba(209, 23, 23, 0.3); /* Change background color on hover */
+  }
+  

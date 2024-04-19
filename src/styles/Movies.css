@@ -1,0 +1,155 @@
+/* Movies.css */
+
+.movies-container {
+    display: flex;
+  }
+  
+  .movies-section {
+    flex: 1;
+    padding: 20px;
+    padding-top: 80px;
+    margin-left:100px;
+  }
+  
+  .movies-heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .details-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  
+  .movie-name {
+    font-size: 24px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Add other styles as needed */
+  /* Movies.css */
+
+/* ... (previous styles) */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust width as needed */
+  gap: 20px;
+  margin-bottom: 20px;
+  height: 20px;
+}
+
+/* ... (previous styles) */
+
+  
+  /* Add more styles based on your design preferences */
+  /* Styles for movie information outside the card content */
+
+  /* Styles for the row with movie year, category, and age rating */
+  .details-row {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .info, .info1 {
+    font-size: 18px;
+    color: #b6adad;
+  }
+  
+  /* Add more styles based on your design preferences */
+  /* Add bullet circles to separate the details in the row */
+.info::before {
+    content: '\2022'; /* Unicode character for a bullet circle */
+    display: inline-block;
+    margin-right: 10px;
+  }
+  /* Movies.css */
+
+/* ... (previous styles) */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust width as needed */
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.movie-card {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+  
+  border-radius: 8px; /* Add rounded corners for a thumbnail-like appearance */
+  overflow: hidden;
+}
+
+.movie-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+
+}
+
+/* Movies.css */
+
+/* ... (previous styles) */
+/* Movies.css */
+
+/* ... (previous styles) */
+
+@media (max-width: 767px) {
+  .movies-container {
+    margin-top: 60px;
+  }
+  
+  .search-bar {
+    width: 120%; /* Adjust margin as needed */
+    position: absolute;
+    margin: 10px; /* Add slight margin */
+    justify-content: left;
+    margin-left: -100px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Display only one card per row */
+    gap: 20px;
+    margin-bottom: 10px;
+    justify-items: start; /* Align cards to the start (left) of the container */
+  }
+  .movies-section {
+    margin: 0;
+  }
+  .movies-heading {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+}
+
+
+/* ... (previous styles) */
+
