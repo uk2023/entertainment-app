@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './../styles/Tv.css'; // Import your Tv.css file
+import './../styles/TV.css';
 import SearchBar from './SearchBar';
 import VerticalBar from './VerticalBar';
 import Modal from './Modal'; // Import your Modal component
