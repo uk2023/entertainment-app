@@ -8,6 +8,8 @@ import SearchBar from './SearchBar';
 import VerticalBar from './VerticalBar';
 import './../styles/Bookmarks.css';
 
+import './../app/globals.css';
+
 const Bookmarks = () => {
   const bookmarks = useSelector((state) => state.bookmarks);
   const dispatch = useDispatch();
