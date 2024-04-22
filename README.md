@@ -46,21 +46,21 @@ yarn dev
 
 Open http://localhost:3000 in your browser to view the app.
 
-# Usage
+## Usage
 Once the app is running, you can:
 
 Explore the various entertainment categories.
 Search for specific titles or genres.
 Click on a content item to view detailed information.
 
-# API Documentation
+## API Documentation
 For developers or anyone interested in exploring the API endpoints used in the Entertainment App, the Swagger UI documentation is available:
+# Local API Documentation: http://localhost:3000/api/docs
 
-# Local Development: http://localhost:3000/api/docs
-Deployed App: https://entertainment-app-beryl.vercel.app/api/docs
+## Deployed App: https://entertainment-app-beryl.vercel.app/api/docs
 The API documentation provides a comprehensive guide to the available endpoints, request parameters, responses, and examples.
 
-# Technologies Used
+## Technologies Used
 The Entertainment App is built with the following technologies:
 
 Next.js: A React framework for server-side rendering and building modern web applications.
@@ -69,7 +69,7 @@ Express: A Node.js web application framework for building APIs.
 Swagger UI: An open-source tool for generating interactive API documentation.
 External APIs: Integration with external APIs to fetch entertainment data.
 
-# Learn More
+## Learn More
 To learn more about the technologies used in this project, check out the following resources:
 
 Next.js Documentation
