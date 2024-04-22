@@ -57,7 +57,7 @@ Click on a content item to view detailed information.
 For developers or anyone interested in exploring the API endpoints used in the Entertainment App, the Swagger UI documentation is available:
 # Local API Documentation: http://localhost:3000/api/docs
 
-## Deployed App: https://entertainment-app-beryl.vercel.app/api/docs
+# Deployed App: https://entertainment-app-beryl.vercel.app/
 The API documentation provides a comprehensive guide to the available endpoints, request parameters, responses, and examples.
 
 ## Technologies Used
