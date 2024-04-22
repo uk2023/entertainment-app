@@ -1,6 +1,11 @@
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from '../../../swagger.json'; // Path to your Swagger JSON file
+
 export default function handler(req, res) {
-    // In a real application, you might fetch data or perform other operations here
-    const data = { message: 'Welcome to the API documentation!' };
-    res.status(200).json(data);
+  if (req.method === 'GET') {
+    return swaggerUi.setup(swaggerDocument)(req, res);
   }
-  
+
+  res.setHeader('Allow', ['GET']);
+  return res.status(405).end(`Method ${req.method} Not Allowed`);
+}
