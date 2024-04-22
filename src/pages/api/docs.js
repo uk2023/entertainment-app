@@ -1,5 +1,5 @@
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from '../../../swagger.json'; // Path to your Swagger JSON file
+import swaggerDocument from './../../../swagger.json';
 
 export default function handler(req, res) {
   if (req.method === 'GET') {
