@@ -32,39 +32,35 @@ Install dependencies:
 bash
 Copy code
 npm install
-# or
+or
 yarn install
-# or
-pnpm install
+
 Running the Development Server
 To run the development server and start the app locally, use the following command:
 
 bash
 Copy code
 npm run dev
-# or
+or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 Open http://localhost:3000 in your browser to view the app.
 
-Usage
+# Usage
 Once the app is running, you can:
 
 Explore the various entertainment categories.
 Search for specific titles or genres.
 Click on a content item to view detailed information.
 
-#API Documentation
+# API Documentation
 For developers or anyone interested in exploring the API endpoints used in the Entertainment App, the Swagger UI documentation is available:
 
-#Local Development: http://localhost:3000/api/docs
+# Local Development: http://localhost:3000/api/docs
 Deployed App: https://entertainment-app-beryl.vercel.app/api/docs
 The API documentation provides a comprehensive guide to the available endpoints, request parameters, responses, and examples.
 
-% Technologies Used
+# Technologies Used
 The Entertainment App is built with the following technologies:
 
 Next.js: A React framework for server-side rendering and building modern web applications.
