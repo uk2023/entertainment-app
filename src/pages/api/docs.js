@@ -1,11 +1,14 @@
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from './../../../swagger.json';
+import swaggerDocument from '../../../swagger.json';
 
 export default function handler(req, res) {
   if (req.method === 'GET') {
-    return swaggerUi.setup(swaggerDocument)(req, res);
+    const options = {
+      explorer: true, // Show the Swagger UI Explorer
+    };
+    swaggerUi.setup(swaggerDocument, options)(req, res);
+  } else {
+    res.setHeader('Allow', ['GET']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
-
-  res.setHeader('Allow', ['GET']);
-  return res.status(405).end(`Method ${req.method} Not Allowed`);
 }
