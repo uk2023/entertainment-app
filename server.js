@@ -13,11 +13,12 @@ app.prepare().then(() => {
   // Serve Swagger UI at /api-docs
   server.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-  // Handle other routes with Next.js
-  server.all('*', (req, res) => {
+  // Serve Next.js app at /
+  server.get('*', (req, res) => {
     return handle(req, res);
   });
 
+  // Deploy to Vercel domain
   const PORT = process.env.PORT || 3000;
   server.listen(PORT, (err) => {
     if (err) throw err;
