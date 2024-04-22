@@ -1,0 +1,444 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Entertainment App API",
+    "description": "API documentation for the Entertainment app"
+  },
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "User Authentication",
+      "description": "Endpoints for user authentication"
+    },
+    {
+      "name": "Home",
+      "description": "Endpoints related to home page data"
+    },
+    {
+      "name": "Movies",
+      "description": "Endpoints related to movies"
+    },
+    {
+      "name": "TV Shows",
+      "description": "Endpoints related to TV shows"
+    }
+  ],
+  
+  "paths": {
+    
+    "/login": {
+      "post": {
+        "tags": ["User Authentication"],
+        "summary": "Login User",
+        "description": "Log in an existing user.",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "User credentials",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string",
+                  "example": "john@example.com"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "securepassword"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Login successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Login successful"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid email or password",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Invalid email or password"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Internal server error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/signup": {
+      "post": {
+        "tags": ["User Authentication"],
+        "summary": "Register User",
+        "description": "Register a new user.",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "User details",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string",
+                  "example": "john@example.com"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "securepassword"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "User created successfully",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "User created successfully"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "User already exists",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "User already exists"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Internal server error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/home": {
+      "get": {
+        "tags": ["Home"],
+        "summary": "Get Home Data",
+        "description": "Returns trending and recommended media items for the home page.",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "trendingData": {
+                  "type": "array",
+                  "items": {
+                  }
+                },
+                "recommendedData": {
+                  "type": "array",
+                  "items": {
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Internal server error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/movies": {
+      "get": {
+        "tags": ["Movies"],
+        "summary": "Get Popular Movies",
+        "description": "Returns a list of popular movies from TMDB API.",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Movie"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Internal server error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/movies/search": {
+      "get": {
+        "tags": ["Movies"],
+        "summary": "Search Movies",
+        "description": "Search movies by title using TMDB API.",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Search query for movie title"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Movie"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Internal server error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tv": {
+      "get": {
+        "tags": ["TV Shows"],
+        "summary": "Get Popular TV Shows",
+        "description": "Returns a list of popular TV shows.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TVShow"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tv/{id}": {
+      "get": {
+        "tags": ["TV Shows"],
+        "summary": "Get TV Show Details by ID",
+        "description": "Get detailed information about a TV show by its ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the TV show",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/TVShowDetails"
+            }
+          }
+        }
+      }
+    },
+    "/tv/search": {
+      "post": {
+        "tags": ["TV Shows"],
+        "summary": "Search TV Shows",
+        "description": "Search for TV shows by a search query.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Search query for TV shows",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "searchQuery": {
+                  "type": "string",
+                  "description": "TV show search query"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TVShow"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Movie": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "example": 12345
+        },
+        "title": {
+          "type": "string",
+          "example": "Movie Title"
+        },
+        "poster_path": {
+          "type": "string",
+          "example": "/path/to/poster.jpg"
+        },
+        "release_date": {
+          "type": "string",
+          "format": "date",
+          "example": "2024-04-20"
+        },
+        "vote_average": {
+          "type": "number",
+          "example": 8.5
+        }
+      }
+    },
+    "TVShow": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "poster_path": {
+          "type": "string"
+        },
+        "first_air_date": {
+          "type": "string"
+        },
+        "vote_average": {
+          "type": "number"
+        }
+      }
+    },
+    "TVShowDetails": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "overview": {
+          "type": "string"
+        },
+        "poster_path": {
+          "type": "string"
+        },
+        "first_air_date": {
+          "type": "string"
+        },
+        "vote_average": {
+          "type": "number"
+        },
+        "credits": {
+          "type": "object",
+          "properties": {}
+        },
+        "external_ids": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    },
+    "UserAuthentication": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "john@example.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "securepassword"
+        }
+      }
+    }
+  }
+}

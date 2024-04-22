@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'; // Import PersistGate
 import store, { persistor } from '../redux/store'; // Import your Redux store
 
+
 const poppins = Poppins({
   weight: '400',
   subsets: ['latin'],

@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleBookmark } from '../redux/slices/bookmarkSlice';
 import SearchBar from './SearchBar';
+import axios from 'axios'; // Import Axios
 import './../app/globals.css';
 import './../styles/Home.css';
 import VerticalBar from './VerticalBar';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -19,51 +21,18 @@ const Home = () => {
 
 
   useEffect(() => {
-    const fetchTrendingData = async () => {
-      const trendingResponse = await fetch(
-        `https://api.themoviedb.org/3/trending/all/week?api_key=2e156bfbafb2b80aff6215674fa06522`
-      );
-      const trendingData = await trendingResponse.json();
-      setTrendingData(trendingData.results);
-    };
-
-    const shuffleArray = (array) => {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    };
-
-    const fetchRecommendedData = async () => {
+    const fetchHomeData = async () => {
       try {
-        const movieResponse = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?api_key=2e156bfbafb2b80aff6215674fa06522&language=en-US&page=1`
-        );
-        if (!movieResponse.ok) {
-          throw new Error('Failed to fetch recommended movies');
-        }
-        const movieData = await movieResponse.json();
-
-        const tvResponse = await fetch(
-          `https://api.themoviedb.org/3/tv/popular?api_key=2e156bfbafb2b80aff6215674fa06522&language=en-US&page=1`
-        );
-        if (!tvResponse.ok) {
-          throw new Error('Failed to fetch recommended TV shows');
-        }
-        const tvData = await tvResponse.json();
-
-        const combinedData = [...movieData.results, ...tvData.results];
-        const shuffledData = shuffleArray(combinedData);
-
-        setRecommendedData(shuffledData);
+        const response = await axios.get('/api/home');
+        const { trendingData, recommendedData } = response.data;
+        setTrendingData(trendingData);
+        setRecommendedData(recommendedData);
       } catch (error) {
-        console.error('Error fetching recommended data:', error);
+        console.error('Error fetching home data:', error);
       }
     };
 
-    fetchTrendingData();
-    fetchRecommendedData();
+    fetchHomeData();
   }, []);
 
   const getReleaseYearForTV = (firstAirDate) => firstAirDate?.substring(0, 4);
