@@ -5,13 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "lint": "next lint"
   },
 
   "scripts": {
     
-   "start": "node server.js",
     "dev": "node server.js"
   },
   
